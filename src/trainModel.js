@@ -17,10 +17,12 @@ const train = points => {
 };
 
 const predict = x => {
-  const xs = tf.tensor1d(x);
-  // linear function: y = m*x + b
-  const ys = xs.mul(m).add(b);
-  return ys;
+  return tf.tidy(() => {
+    const xs = tf.tensor1d(x);
+    // linear function: y = m*x + b
+    const ys = xs.mul(m).add(b);
+    return ys;
+  });
 };
 
 export { train, predict };
