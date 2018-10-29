@@ -9,6 +9,7 @@
     "p5": "^0.7.2",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
+    "react-numpad": "^3.0.14",
     "react-scripts": "2.0.5",
     "reactstrap": "^6.5.0"
   },
